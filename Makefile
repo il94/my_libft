@@ -76,19 +76,13 @@ $(NAME) : $(OBJ) $(ADD_OBJ)
 	@$(CC) $(CFLAGS) -c $^
 
 clean :
-	@$(MAKE) --no-print-directory clean -C ft_printf
-	@$(MAKE) --no-print-directory clean -C ft_get_next_line
+	@$(MAKE) --no-print-directory fclean -C ft_printf
+	@$(MAKE) --no-print-directory fclean -C ft_get_next_line
 	@echo "\033[35mCleaning Libft's objects...\033[0m"
 	@rm -f $(OBJ) $(ADD_OBJ)
 	@echo "\033[32mDone\033[0m"
 
 fclean : clean
-	@echo "\033[35mCleaning Libft_printf...\033[0m"
-	@rm ft_printf/libftprintf.a
-	@echo "\033[32mDone\033[0m"
-	@echo "\033[35mCleaning Libft_gnl...\033[0m"
-	@rm ft_get_next_line/libftgnl.a
-	@echo "\033[32mDone\033[0m"
 	@echo "\033[35mCleaning Libft...\033[0m"
 	@rm -f $(LIBFT_BASE)
 	@rm -f $(NAME)
@@ -96,4 +90,4 @@ fclean : clean
 
 re : fclean all
 
-.PHONY : all additional clean fclean re
+.PHONY : all clean fclean re

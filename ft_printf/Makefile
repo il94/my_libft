@@ -26,7 +26,7 @@ clean :
 
 fclean : clean
 	@echo "\033[35mCleaning Libft_printf...\033[0m"
-	rm -f $(NAME)
+	@rm -f $(NAME)
 	@echo "\033[32mDone\033[0m"
 
 re : fclean all
