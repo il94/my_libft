@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_array.c                                   :+:      :+:    :+:   */
+/*   ft_get_size_array.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 14:56:06 by ilandols          #+#    #+#             */
-/*   Updated: 2022/07/23 15:18:41 by ilandols         ###   ########.fr       */
+/*   Created: 2022/07/23 15:09:27 by ilandols          #+#    #+#             */
+/*   Updated: 2022/07/23 15:09:58 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_print_array(char **elements)
+int	ft_get_size_array(char **elements)
 {
 	int	i;
 
 	i = 0;
 	while (elements[i])
-	{
-		ft_printf("%s\n", elements[i]);
 		i++;
-	}
+	return (i);
 }

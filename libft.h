@@ -6,7 +6,7 @@
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 00:50:41 by ilandols          #+#    #+#             */
-/*   Updated: 2022/07/06 15:28:56 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/07/23 15:20:56 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 long long	ft_long_long_atoi(const char *nptr);
 void		ft_print_array(char **elements);
+int			ft_get_size_array(char **elements);
 void		ft_free_array(char **elements);
 void		ft_delete_content(int *content);
 void		ft_print_bits(int byte);

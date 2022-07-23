@@ -5,9 +5,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Wed Jul  6 16:45:33 2022
+# Make data base, printed on Sat Jul 23 15:30:14 2022
 
 # Variables
 
@@ -16,139 +15,81 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # automatic
 ?F = $(notdir $?)
 # environment
-DESKTOP_SESSION = ubuntu
+WSLENV = VSCODE_WSL_EXT_LOCATION/up
 # default
 .SHELLFLAGS := -c
-# makefile (from 'Makefile', line 55)
+# makefile (from 'Makefile', line 57)
 OBJ = $(SRC:.c=.o)
-# environment
-XDG_SESSION_CLASS = user
 # makefile (from 'Makefile', line 6)
-SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_itoa.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c ft_split.c ft_strchr.c ft_strdup.c ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c ft_long_long_atoi.c ft_delete_content.c ft_free_array.c ft_print_bits.c ft_iswhitespace.c
-# environment
-XDG_SESSION_TYPE = x11
-# environment
-VSCODE_LOG_NATIVE = false
+SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_itoa.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c ft_split.c ft_strchr.c ft_strdup.c ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c ft_long_long_atoi.c ft_delete_content.c ft_print_array.c ft_get_size_array.c ft_free_array.c ft_print_bits.c ft_iswhitespace.c
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
-# environment
-XAUTHORITY = /mnt/nfs/homes/ilandols/.Xauthority
-# environment
-GDMSESSION = ubuntu
-# environment
-XMODIFIERS = @im=ibus
+# automatic
+@F = $(notdir $@)
 # makefile
-CURDIR := /mnt/nfs/homes/ilandols/42/repo_perso/il_libft
+CURDIR := /home/ilyes/42/il_libft
 # makefile
 SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"fr","availableLanguages":{"*":"fr"},"_languagePackId":"8e1a08857df44efaeace20a1f4372f40.fr","_translationsConfigFile":"/home/ilyes/.vscode-server/data/clp/8e1a08857df44efaeace20a1f4372f40.fr/tcf.json","_cacheRoot":"/home/ilyes/.vscode-server/data/clp/8e1a08857df44efaeace20a1f4372f40.fr","_resolvedLanguagePackCoreLocation":"/home/ilyes/.vscode-server/data/clp/8e1a08857df44efaeace20a1f4372f40.fr/3b889b090b5ad5793f524b5d1d39fda662b96a2a","_corruptedFile":"/home/ilyes/.vscode-server/data/clp/8e1a08857df44efaeace20a1f4372f40.fr/corrupted.info","_languagePackSupport":true}
 # environment
-_ = /usr/share/code/code
+_ = /home/ilyes/.vscode-server/bin/3b889b090b5ad5793f524b5d1d39fda662b96a2a/node
 # makefile (from 'Makefile', line 4)
 CFLAGS = -Wall -Wextra -Werror
-# environment
-JOURNAL_STREAM = 9:726134
-# environment
-XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile (from 'Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
-# automatic
-@F = $(notdir $@)
-# environment
-GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # 'override' directive
 GNUMAKEFLAGS := 
-# environment
-MANDATORY_PATH = /usr/share/gconf/ubuntu.mandatory.path
-# environment
-XDG_DATA_DIRS = /usr/share/gnome:/usr/share/ubuntu:/mnt/nfs/homes/ilandols/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
-# environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/101934/bus
-# makefile (from 'Makefile', line 61)
+# makefile (from 'Makefile', line 63)
 LIBFT_BASE = libft_base.a
 # environment
-VSCODE_VERBOSE_LOGGING = true
-# environment
-MANAGERPID = 123510
-# environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/101934/vscode-ipc-6d78e447-0bcc-4df6-b71f-1bce23c7c19f.sock
-# environment
-VSCODE_CWD = /mnt/nfs/homes/ilandols
-# environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session3
-# environment
-KRB5CCNAME = FILE:/tmp/krb5cc_101934_3Aj0nl
+VSCODE_CWD = /mnt/c/Users/ilyes/AppData/Local/Programs/Microsoft VS Code
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /mnt/nfs/homes/ilandols/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-# environment
-GPG_AGENT_INFO = /run/user/101934/gnupg/S.gpg-agent:0:1
+PATH = /home/ilyes/.vscode-server/bin/3b889b090b5ad5793f524b5d1d39fda662b96a2a/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Player/bin/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/PowerShell/7/:/mnt/c/Users/ilyes/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ilyes/AppData/Local/Programs/Microsoft VS Code/bin
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
-SESSION_MANAGER = local/e1r11p9.42.fr:@/tmp/.ICE-unix/123931,unix/e1r11p9.42.fr:/tmp/.ICE-unix/123931
-# environment
-XDG_RUNTIME_DIR = /run/user/101934
-# environment
-XDG_MENU_PREFIX = gnome-
-# environment
-VSCODE_LOG_STACK = false
+XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = bc540703e0c9415bbadefbe1c23865e0
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-e7e20777-f109-4a13-9439-6a20dfbf49ad.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
-XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/ilandols
-# environment
-LS_COLORS = 
-# environment
-XDG_SESSION_DESKTOP = ubuntu
-# environment
-SSH_AUTH_SOCK = /run/user/101934/keyring/ssh
-# environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 125476
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
 # automatic
 %F = $(notdir $%)
 # environment
 DISPLAY = :0
-# environment
-VSCODE_PIPE_LOGGING = true
-# makefile (from 'Makefile', line 62)
+# makefile (from 'Makefile', line 64)
 PRINTF = ft_printf/libftprintf.a
 # environment
-PWD = /mnt/nfs/homes/ilandols/42/repo_perso/il_libft
+PWD = /home/ilyes/42/il_libft
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 123891
+WSL_INTEROP = /run/WSL/11_interop
 # environment
-ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
-# makefile (from 'Makefile', line 59)
+PULSE_SERVER = /mnt/wslg/PulseServer
+# makefile (from 'Makefile', line 61)
 ADD_OBJ = $(ADD_SRC:.c=.o)
-# environment
-GTK_MODULES = gail:atk-bridge
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-HOME = /mnt/nfs/homes/ilandols
+HOME = /home/ilyes
 # environment
-VSCODE_CODE_CACHE_PATH = /mnt/nfs/homes/ilandols/.config/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
-# environment
-LOGNAME = ilandols
+LOGNAME = ilyes
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
-ZSH = /mnt/nfs/homes/ilandols/.oh-my-zsh
+ZSH = /home/ilyes/.oh-my-zsh
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
-# environment
-GNOME_DESKTOP_SESSION_ID = this-is-deprecated
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
@@ -158,39 +99,31 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
-QT_IM_MODULE = ibus
-# environment
-SHLVL = 1
+SHLVL = 0
 # makefile (from 'Makefile', line 3)
 CC = gcc
-# environment
-IM_CONFIG_PHASE = 1
 # default
 MAKE_VERSION := 4.2.1
 # environment
-USER = ilandols
+USER = ilyes
 # makefile
 .DEFAULT_GOAL := all
-# environment
-XDG_CURRENT_DESKTOP = Unity
-# environment
-LIBVIRT_DEFAULT_URI = qemu:///system
+# makefile (from 'Makefile', line 1)
+NAME = libft.a
 # environment
 LESS = -R
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
+# environment
+VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/ilyes/.vscode/extensions/ms-vscode-remote.remote-wsl-0.66.3
 # default
 MAKE_COMMAND := make
 # environment
-OLDPWD = /mnt/nfs/homes/ilandols
+OLDPWD = /mnt/c/Users/ilyes/AppData/Local/Programs/Microsoft VS Code
 # default
 .VARIABLES := 
 # automatic
 *F = $(notdir $*)
-# environment
-XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
-# environment
-VSCODE_IPC_HOOK = /run/user/101934/vscode-245e1149-1.68.1-main.sock
 # makefile
 MAKEFLAGS = pqrR
 # environment
@@ -199,52 +132,42 @@ MFLAGS = -pqrR
 *D = $(patsubst %/,%,$(dir $*))
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
-# environment
-GDK_BACKEND = x11
 # automatic
 +F = $(notdir $+)
 # environment
-NO_AT_BRIDGE = 1
-# environment
-QT_ACCESSIBILITY = 1
-# environment
-DEFAULTS_PATH = /usr/share/gconf/ubuntu.default.path
+VSCODE_HANDLES_SIGPIPE = true
 # default
 MAKEFILES := 
-# makefile (from 'Makefile', line 63)
+# makefile (from 'Makefile', line 65)
 GNL = ft_get_next_line/libftgnl.a
 # automatic
 <F = $(notdir $<)
 # environment
 PAGER = less
-# makefile (from 'Makefile', line 57)
+# makefile (from 'Makefile', line 59)
 ADD_SRC = 
 # environment
 LC_ALL = C
 # environment
-GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+HOSTTYPE = x86_64
 # automatic
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
 # environment
-CHROME_DESKTOP = code-url-handler.desktop
+WAYLAND_DISPLAY = wayland-0
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
-# environment
-GJS_DEBUG_OUTPUT = stderr
-# makefile (from 'Makefile', line 1)
-NAME = libft.a
 # default
 .RECIPEPREFIX := 
 # environment
 LANG = C
 # environment
-DOCKER_HOST = unix:///run/user/101934/docker.sock
+TERM = xterm-256color
 # environment
-VSCODE_PID = 125476
+WSL_DISTRO_NAME = Ubuntu-20.04
 # variable set hash-table stats:
-# Load=116/1024=11%, Rehash=0, Collisions=17/152=11%
+# Load=78/1024=8%, Rehash=0, Collisions=8/115=7%
 
 # Pattern-specific Variable Values
 
@@ -252,14 +175,14 @@ VSCODE_PID = 125476
 
 # Directories
 
-# . (device 60, inode 60625054): 56 files, no impossibilities.
+# . (device 2080, inode 109043): 58 files, no impossibilities.
 
-# 56 files, no impossibilities in 1 directories.
+# 58 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
 %.o: %.c
-#  recipe to execute (from 'Makefile', line 76):
+#  recipe to execute (from 'Makefile', line 78):
 	@$(CC) $(CFLAGS) -c $^
 
 # 1 implicit rules, 0 (0.0%) terminal.
@@ -278,18 +201,11 @@ ft_lstiter.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-additional:
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-
 # Not a target:
 ft_memcpy.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
- 
 
 # Not a target:
 ft_itoa.o:
@@ -344,6 +260,12 @@ ft_memset.o:
 #  File has not been updated.
 
 # Not a target:
+ft_get_size_array.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 ft_tolower.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -352,6 +274,7 @@ ft_tolower.o:
 # Not a target:
 ft_strrchr.o:
 #  Implicit rule search has not been done.
+ 
 #  Modification time never checked.
 #  File has not been updated.
 
@@ -382,14 +305,14 @@ ft_strlcat.o:
 # Not a target:
 ft_atoi.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-06 13:40:00.581104405
+#  Last modified 2022-07-23 15:03:24.0364197
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-06 16:23:44.738830828
+#  Last modified 2022-07-23 15:21:38.4664197
 #  File has been updated.
 #  Successfully updated.
 
@@ -399,14 +322,14 @@ ft_isprint.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-libft.a: ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o ft_itoa.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_putchar_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putstr_fd.o ft_split.o ft_strchr.o ft_strdup.o ft_striteri.o ft_strjoin.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strmapi.o ft_strncmp.o ft_strnstr.o ft_strrchr.o ft_strtrim.o ft_substr.o ft_tolower.o ft_toupper.o ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o ft_long_long_atoi.o ft_delete_content.o ft_free_array.o ft_print_bits.o ft_iswhitespace.o
+libft.a: ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o ft_itoa.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_putchar_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putstr_fd.o ft_split.o ft_strchr.o ft_strdup.o ft_striteri.o ft_strjoin.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strmapi.o ft_strncmp.o ft_strnstr.o ft_strrchr.o ft_strtrim.o ft_substr.o ft_tolower.o ft_toupper.o ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o ft_long_long_atoi.o ft_delete_content.o ft_print_array.o ft_get_size_array.o ft_free_array.o ft_print_bits.o ft_iswhitespace.o
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/5=0%
-#  recipe to execute (from 'Makefile', line 68):
+#  recipe to execute (from 'Makefile', line 70):
 	@$(MAKE) --no-print-directory -C ft_printf
 	@$(MAKE) --no-print-directory -C ft_get_next_line
 	@echo "\033[33mMaking Libft\033[0m"
@@ -444,7 +367,7 @@ ft_lstnew.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-.PHONY: all additional clean fclean re
+.PHONY: all clean fclean re
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -460,13 +383,7 @@ fclean: clean
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 86):
-	@echo "\033[35mCleaning Libft_printf...\033[0m"
-	@rm ft_printf/libftprintf.a
-	@echo "\033[32mDone\033[0m"
-	@echo "\033[35mCleaning Libft_gnl...\033[0m"
-	@rm ft_get_next_line/libftgnl.a
-	@echo "\033[32mDone\033[0m"
+#  recipe to execute (from 'Makefile', line 88):
 	@echo "\033[35mCleaning Libft...\033[0m"
 	@rm -f $(LIBFT_BASE)
 	@rm -f $(NAME)
@@ -537,12 +454,18 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 79):
-	@$(MAKE) --no-print-directory clean -C ft_printf
-	@$(MAKE) --no-print-directory clean -C ft_get_next_line
+#  recipe to execute (from 'Makefile', line 81):
+	@$(MAKE) --no-print-directory fclean -C ft_printf
+	@$(MAKE) --no-print-directory fclean -C ft_get_next_line
 	@echo "\033[35mCleaning Libft's objects...\033[0m"
 	@rm -f $(OBJ) $(ADD_OBJ)
 	@echo "\033[32mDone\033[0m"
+
+# Not a target:
+ft_print_array.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 ft_isalnum.o:
@@ -567,7 +490,6 @@ ft_isascii.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
- 
 
 # Not a target:
 ft_strdup.o:
@@ -631,6 +553,7 @@ ft_atoi.o: ft_atoi.c
 #  Needs to be updated (-q is set).
 # automatic
 # @ := ft_atoi.o
+ 
 # automatic
 # % := 
 # automatic
@@ -647,7 +570,7 @@ ft_atoi.o: ft_atoi.c
 # ? := ft_atoi.c
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=1/14=7%
-#  recipe to execute (from 'Makefile', line 76):
+#  recipe to execute (from 'Makefile', line 78):
 	@$(CC) $(CFLAGS) -c $^
 
 # Not a target:
@@ -669,19 +592,19 @@ ft_putendl_fd.o:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=59/1024=6%, Rehash=0, Collisions=7/131=5%
+# Load=60/1024=6%, Rehash=0, Collisions=7/133=5%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 118 / storage = 1477 B / avg = 12 B
-# current buf: size = 8162 B / used = 1477 B / count = 118 / avg = 12 B
+# strcache buffers: 1 (0) / strings = 121 / storage = 1540 B / avg = 12 B
+# current buf: size = 8162 B / used = 1540 B / count = 121 / avg = 12 B
 
-# strcache performance: lookups = 139 / hit rate = 15%
+# strcache performance: lookups = 142 / hit rate = 14%
 # hash-table stats:
-# Load=118/8192=1%, Rehash=0, Collisions=4/139=3%
-# Finished Make data base on Wed Jul  6 16:45:33 2022
+# Load=121/8192=1%, Rehash=0, Collisions=4/142=3%
+# Finished Make data base on Sat Jul 23 15:30:14 2022
 
  

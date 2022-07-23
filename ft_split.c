@@ -6,7 +6,7 @@
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 16:44:13 by ilandols          #+#    #+#             */
-/*   Updated: 2022/07/05 17:41:04 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/07/23 15:30:21 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ static int	count_words(char const *s, char c)
 	int	result;
 	int	i;
 
-	if (!s[0])
+	if (!s || !s[0])
 		return (0);
 	if (!c)
 		return (1);
