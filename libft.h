@@ -69,6 +69,7 @@ void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 long long	ft_long_long_atoi(const char *nptr);
+void		ft_print_array(char **elements);
 void		ft_free_array(char **elements);
 void		ft_delete_content(int *content);
 void		ft_print_bits(int byte);

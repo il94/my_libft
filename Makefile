@@ -48,6 +48,7 @@ SRC = ft_atoi.c \
 	ft_lstmap.c	\
 	ft_long_long_atoi.c \
 	ft_delete_content.c \
+	ft_print_array.c \
 	ft_free_array.c \
 	ft_print_bits.c \
 	ft_iswhitespace.c
