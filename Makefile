@@ -52,7 +52,9 @@ SRC = ft_atoi.c \
 	ft_get_size_array.c \
 	ft_free_array.c \
 	ft_print_bits.c \
-	ft_iswhitespace.c
+	ft_iswhitespace.c \
+	ft_islower.c \
+	ft_get_size_number.c
 
 OBJ = $(SRC:.c=.o)
 

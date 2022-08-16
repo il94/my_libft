@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_size_array.c                                :+:      :+:    :+:   */
+/*   ft_islower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 15:09:27 by ilandols          #+#    #+#             */
-/*   Updated: 2022/08/16 07:43:13 by ilandols         ###   ########.fr       */
+/*   Created: 2022/08/03 14:49:11 by ilandols          #+#    #+#             */
+/*   Updated: 2022/08/03 14:49:32 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_get_size_array(char **elements)
+int	ft_islower(int c)
 {
-	int	i;
-
-	i = 0;
-	while (elements[i])
-		i++;
-	return (i);
+	return (c >= 'a' && c <= 'z');
 }

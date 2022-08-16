@@ -1,5 +1,5 @@
 make --dry-run --keep-going --print-directory
-make: Entering directory '/home/ilyes/42/il_libft'
+make: Entering directory '/mnt/nfs/homes/ilandols/42/repo_perso/il_libft'
 gcc -Wall -Wextra -Werror -c ft_atoi.c
 gcc -Wall -Wextra -Werror -c ft_bzero.c
 gcc -Wall -Wextra -Werror -c ft_calloc.c
@@ -18,6 +18,7 @@ gcc -Wall -Wextra -Werror -c ft_putchar_fd.c
 gcc -Wall -Wextra -Werror -c ft_putendl_fd.c
 gcc -Wall -Wextra -Werror -c ft_putnbr_fd.c
 gcc -Wall -Wextra -Werror -c ft_putstr_fd.c
+ 
 gcc -Wall -Wextra -Werror -c ft_split.c
 gcc -Wall -Wextra -Werror -c ft_strchr.c
 gcc -Wall -Wextra -Werror -c ft_strdup.c
@@ -50,24 +51,30 @@ gcc -Wall -Wextra -Werror -c ft_get_size_array.c
 gcc -Wall -Wextra -Werror -c ft_free_array.c
 gcc -Wall -Wextra -Werror -c ft_print_bits.c
 gcc -Wall -Wextra -Werror -c ft_iswhitespace.c
+gcc -Wall -Wextra -Werror -c ft_islower.c
+gcc -Wall -Wextra -Werror    ft_get_size_number.c   -o ft_get_size_number
 make --no-print-directory -C ft_printf
+ 
 gcc -Wall -Wextra -Werror -c ft_printf.c
+ 
 gcc -Wall -Wextra -Werror -c convert_flag.c
 gcc -Wall -Wextra -Werror -c p_convert_flag.c
 gcc -Wall -Wextra -Werror -c flags.c
 echo "\033[33mMaking Libft_printf\033[0m"
 ar rcs libftprintf.a ft_printf.o convert_flag.o p_convert_flag.o flags.o 
 echo "\033[32mDone\033[0m"
+ 
 make --no-print-directory -C ft_get_next_line
  
 gcc -Wall -Wextra -Werror -c ft_get_next_line.c
+ 
 gcc -Wall -Wextra -Werror -c get_next_line_utils.c
 echo "\033[33mMaking Libft_gnl\033[0m"
 ar rcs libftgnl.a ft_get_next_line.o get_next_line_utils.o 
 echo "\033[32mDone\033[0m"
 echo "\033[33mMaking Libft\033[0m"
-ar rc libft_base.a ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o ft_itoa.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_putchar_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putstr_fd.o ft_split.o ft_strchr.o ft_strdup.o ft_striteri.o ft_strjoin.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strmapi.o ft_strncmp.o ft_strnstr.o ft_strrchr.o ft_strtrim.o ft_substr.o ft_tolower.o ft_toupper.o ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o ft_long_long_atoi.o ft_delete_content.o ft_print_array.o ft_get_size_array.o ft_free_array.o ft_print_bits.o ft_iswhitespace.o
+ar rc libft_base.a ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o ft_itoa.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_putchar_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putstr_fd.o ft_split.o ft_strchr.o ft_strdup.o ft_striteri.o ft_strjoin.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strmapi.o ft_strncmp.o ft_strnstr.o ft_strrchr.o ft_strtrim.o ft_substr.o ft_tolower.o ft_toupper.o ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o ft_long_long_atoi.o ft_delete_content.o ft_print_array.o ft_get_size_array.o ft_free_array.o ft_print_bits.o ft_iswhitespace.o ft_islower.o ft_get_size_number
 ar -rcT libft.a libft_base.a ft_printf/libftprintf.a ft_get_next_line/libftgnl.a
 echo "\033[32mDone\033[0m"
-make: Leaving directory '/home/ilyes/42/il_libft'
+make: Leaving directory '/mnt/nfs/homes/ilandols/42/repo_perso/il_libft'
  
