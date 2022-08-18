@@ -54,7 +54,8 @@ SRC = ft_atoi.c \
 	ft_print_bits.c \
 	ft_iswhitespace.c \
 	ft_islower.c \
-	ft_get_size_number.c
+	ft_get_size_number.c \
+	ft_get_file_content.c
 
 OBJ = $(SRC:.c=.o)
 

@@ -1,0 +1,4 @@
+*.o
+./a.out
+.vscode
+ft_realloc.c
