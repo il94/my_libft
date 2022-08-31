@@ -1,4 +1,4 @@
 *.o
 ./a.out
+libft.a
 .vscode
-ft_realloc.c
