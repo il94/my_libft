@@ -6,7 +6,7 @@
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 00:50:41 by ilandols          #+#    #+#             */
-/*   Updated: 2022/09/01 00:19:29 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/09/01 00:29:56 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef enum	e_bool {
+typedef enum e_bool {
 	FALSE,
 	TRUE
 }				t_bool;
 
-typedef struct	s_pos {
+typedef struct s_pos {
 	int	x;
 	int	y;
 }				t_pos;
