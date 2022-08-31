@@ -50,6 +50,8 @@ SRC = ft_atoi.c \
 
 OBJ = $(SRC:.c=.o)
 
+LISTS_PATH = linked_lists/
+
 LISTS_SRC = ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \
@@ -80,7 +82,7 @@ $(NAME) : $(OBJ) $(LISTS_OBJ) $(ADD_OBJ)
 	@ar -rcT $(NAME) $(LIBFT_BASE) $(PRINTF) $(GNL)
 	@echo "\033[32mDone\033[0m"
 
-%.o : %.c
+%.o : $(LISTS_PATH)%.c
 	@$(CC) $(CFLAGS) -c $^
 
 clean :

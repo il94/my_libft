@@ -6,7 +6,7 @@
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 00:50:41 by ilandols          #+#    #+#             */
-/*   Updated: 2022/09/01 00:29:56 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/09/01 00:32:47 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "ft_printf/ft_printf.h"
 # include "ft_get_next_line/get_next_line.h"
-# include "linked_lists.h"
+# include "linked_lists/linked_lists.h"
 # include <stdlib.h>
 # include <unistd.h>
 
