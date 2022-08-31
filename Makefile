@@ -51,7 +51,6 @@ SRC = ft_atoi.c \
 OBJ = $(SRC:.c=.o)
 
 LISTS_PATH = linked_lists/
-
 LISTS_SRC = ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \
