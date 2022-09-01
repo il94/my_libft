@@ -75,29 +75,30 @@ GNL = ft_get_next_line/libftgnl.a
 all : $(NAME)
 
 $(NAME) : $(OBJ) $(LISTS_OBJ) $(ADD_OBJ)
-	@$(MAKE) --no-print-directory -C ft_printf
-	@$(MAKE) --no-print-directory -C ft_get_next_line
-	@echo "\033[33mMaking Libft\033[0m"
-	@ar rc $(LIBFT_BASE) $^
-	@ar -rcT $(NAME) $(LIBFT_BASE) $(PRINTF) $(GNL)
-	@echo "\033[32mDone\033[0m"
+	$(MAKE) --no-print-directory -C ft_printf
+	$(MAKE) --no-print-directory -C ft_get_next_line
+	echo "\033[33mMaking Libft\033[0m"
+	ar rc $(LIBFT_BASE) $^
+	ar -rcT $(NAME) $(LIBFT_BASE) $(PRINTF) $(GNL)
+	echo "\033[32mDone\033[0m"
 
 %.o : $(LISTS_PATH)%.c
-	@$(CC) $(CFLAGS) -c $^
+	$(CC) $(CFLAGS) -c $^
 
 clean :
-	@$(MAKE) --no-print-directory fclean -C ft_printf
-	@$(MAKE) --no-print-directory fclean -C ft_get_next_line
-	@echo "\033[35mCleaning Libft's objects...\033[0m"
-	@rm -f $(OBJ) $(LISTS_OBJ) $(ADD_OBJ)
-	@echo "\033[32mDone\033[0m"
+	$(MAKE) --no-print-directory fclean -C ft_printf
+	$(MAKE) --no-print-directory fclean -C ft_get_next_line
+	echo "\033[35mCleaning Libft's objects...\033[0m"
+	rm -f $(OBJ) $(LISTS_OBJ) $(ADD_OBJ)
+	echo "\033[32mDone\033[0m"
 
 fclean : clean
-	@echo "\033[35mCleaning Libft...\033[0m"
-	@rm -f $(LIBFT_BASE)
-	@rm -f $(NAME)
-	@echo "\033[32mDone\033[0m"
+	echo "\033[35mCleaning Libft...\033[0m"
+	rm -f $(LIBFT_BASE)
+	rm -f $(NAME)
+	echo "\033[32mDone\033[0m"
 
 re : fclean all
 
 .PHONY : all clean fclean re
+.SILENT :
