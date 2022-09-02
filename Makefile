@@ -60,7 +60,7 @@ LISTS_SRC = ft_lstnew.c \
 			ft_lstclear.c \
 			ft_lstiter.c \
 			ft_lstmap.c	\
-			ft_lstcorrect.c
+			ft_lstis_correct.c
 
 LISTS_OBJ = $(LISTS_SRC:.c=.o)
 
