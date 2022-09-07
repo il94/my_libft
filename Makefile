@@ -67,17 +67,13 @@ LISTS_SRC = ft_lstnew.c \
 
 LISTS_OBJ = $(LISTS_SRC:.c=.o)
 
-ADD_SRC = #Ajouter les fichiers specifiques au projet en cours\
-
-ADD_OBJ = $(ADD_SRC:.c=.o)
-
 LIBFT_BASE = libft_base.a
 PRINTF = ft_printf/libftprintf.a
 GNL = ft_get_next_line/libftgnl.a
 
 all : $(NAME)
 
-$(NAME) : $(OBJ) $(LISTS_OBJ) $(ADD_OBJ)
+$(NAME) : $(OBJ) $(LISTS_OBJ)
 	$(MAKE) --no-print-directory -C ft_printf
 	$(MAKE) --no-print-directory -C ft_get_next_line
 	echo "\033[33mMaking Libft\033[0m"
@@ -92,7 +88,7 @@ clean :
 	$(MAKE) --no-print-directory fclean -C ft_printf
 	$(MAKE) --no-print-directory fclean -C ft_get_next_line
 	echo "\033[35mCleaning Libft's objects...\033[0m"
-	rm -f $(OBJ) $(LISTS_OBJ) $(ADD_OBJ)
+	rm -f $(OBJ) $(LISTS_OBJ)
 	echo "\033[32mDone\033[0m"
 
 fclean : clean
