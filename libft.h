@@ -6,7 +6,7 @@
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 00:50:41 by ilandols          #+#    #+#             */
-/*   Updated: 2022/09/07 19:31:32 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/09/07 19:40:06 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,6 @@ int			ft_islower(int c);
 int			ft_get_size_number(int number);
 char		**ft_get_file_content(int fd);
 void		ft_print_exit(char *str);
+int			ft_strcmp(const char *s1, const char *s2);
 
 #endif
