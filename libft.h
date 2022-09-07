@@ -6,7 +6,7 @@
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 00:50:41 by ilandols          #+#    #+#             */
-/*   Updated: 2022/09/01 00:32:47 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/09/07 19:18:01 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,6 @@ int			ft_iswhitespace(int c);
 int			ft_islower(int c);
 int			ft_get_size_number(int number);
 char		**ft_get_file_content(int fd);
+void		ft_print_error(char *str);
 
 #endif

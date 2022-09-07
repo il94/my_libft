@@ -1,4 +1,5 @@
 NAME = libft.a
+EXEC_NAME = a.out
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
@@ -46,7 +47,8 @@ SRC = ft_atoi.c \
 	ft_iswhitespace.c \
 	ft_islower.c \
 	ft_get_size_number.c \
-	ft_get_file_content.c
+	ft_get_file_content.c \
+	ft_print_error.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -95,6 +97,7 @@ clean :
 fclean : clean
 	echo "\033[35mCleaning Libft...\033[0m"
 	rm -f $(LIBFT_BASE)
+	rm -f $(EXEC_NAME)
 	rm -f $(NAME)
 	echo "\033[32mDone\033[0m"
 
