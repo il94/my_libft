@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_error.c                                   :+:      :+:    :+:   */
+/*   ft_print_exit.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 19:14:40 by ilandols          #+#    #+#             */
-/*   Updated: 2022/09/07 19:17:43 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/09/07 19:31:19 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_print_error(char *str)
+void	ft_print_exit(char *str)
 {
 	write(2, str, ft_strlen(str));
 	exit (1);
