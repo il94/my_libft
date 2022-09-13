@@ -51,7 +51,8 @@ SRC = ft_atoi.c \
 	ft_print_exit.c \
 	ft_strcmp.c \
 	ft_pathjoin.c \
-	ft_strcut.c
+	ft_strcut_right.c \
+	ft_strcut_left.c
 
 OBJ = $(SRC:.c=.o)
 
