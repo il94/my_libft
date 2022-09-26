@@ -6,15 +6,15 @@
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 00:50:41 by ilandols          #+#    #+#             */
-/*   Updated: 2022/09/25 22:35:55 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/09/26 16:44:19 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include "../ft_printf/ft_printf.h"
-# include "../ft_get_next_line/get_next_line.h"
+# include "../ft_printf/include/ft_printf.h"
+# include "../ft_get_next_line/include/get_next_line.h"
 # include "linked_lists.h"
 # include <stdlib.h>
 # include <unistd.h>
@@ -22,7 +22,8 @@
 typedef enum e_bool {
 	FALSE,
 	TRUE
-}				t_bool;
+}
+			t_bool;
 
 typedef struct s_pos {
 	int	x;

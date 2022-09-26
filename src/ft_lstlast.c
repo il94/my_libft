@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/21 17:02:53 by ilyes             #+#    #+#             */
-/*   Updated: 2022/09/25 22:35:38 by ilandols         ###   ########.fr       */
+/*   Created: 2022/04/21 02:57:18 by ilyes             #+#    #+#             */
+/*   Updated: 2022/09/26 15:20:32 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/linked_lists.h"
+#include "../include/linked_lists.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void*))
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (lst == NULL)
-		return ;
-	else
+	t_list	*temp;
+
+	if (lst != NULL)
 	{
-		del(lst->content);
-		free(lst);
+		temp = lst;
+		while (temp->next)
+			temp = temp->next;
+		return (temp);
 	}
+	else
+		return (lst);
 }

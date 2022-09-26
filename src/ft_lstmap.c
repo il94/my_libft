@@ -1,28 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/21 03:03:59 by ilyes             #+#    #+#             */
-/*   Updated: 2022/09/25 22:35:38 by ilandols         ###   ########.fr       */
+/*   Created: 2022/04/22 00:30:43 by ilyes             #+#    #+#             */
+/*   Updated: 2022/09/26 15:20:32 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/linked_lists.h"
+#include "../include/linked_lists.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*temp;
+	t_list	*new;
+	t_list	*li;
 
-	if (*lst != NULL)
+	li = NULL;
+	while (lst)
 	{
-		temp = *lst;
-		while (temp->next != NULL)
-			temp = temp->next;
-		temp->next = new;
+		new = ft_lstnew((*f)(lst->content));
+		if (new == NULL)
+		{
+			while (li)
+			{
+				new = li->next;
+				(*del)(li->content);
+				free(li);
+				li = new;
+			}
+			lst = NULL;
+			return (NULL);
+		}
+		ft_lstadd_back(&li, new);
+		lst = lst->next;
 	}
-	else
-		*lst = new;
+	return (li);
 }

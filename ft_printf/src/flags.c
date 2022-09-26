@@ -6,11 +6,11 @@
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 18:48:51 by ilyes             #+#    #+#             */
-/*   Updated: 2022/07/06 14:47:25 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/09/26 16:43:58 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../include/ft_printf.h"
 
 void	str_toupper(char *str)
 {

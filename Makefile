@@ -1,5 +1,5 @@
 #==============================================================================#
-#                                   TARGET                                     #
+#                                   TARGETS                                    #
 #==============================================================================#
 
 NAME = libft.a
@@ -11,8 +11,9 @@ EXEC = a.out
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-AR = ar
-ARFLAGS = -rc
+DFLAGS = -MMD
+AR = ar -rc
+MKDIR = mkdir -p
 RM = rm -f
 MAKE_SILENT = make --no-print-directory
 
@@ -30,9 +31,8 @@ END = \033[0m
 #==============================================================================#
 
 SRC_DIR = src
-SRCLST_DIR = $(SRC)/linked_lists
+HEADER_DIR = include
 OBJ_DIR = obj
-DEP_DIR = dep
 
 #==============================================================================#
 #                                   SOURCES                                    #
@@ -50,25 +50,23 @@ SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c \
 		ft_print_array.c ft_get_size_array.c ft_free_array.c ft_print_bits.c \
 		ft_iswhitespace.c ft_islower.c ft_get_size_number.c ft_get_file_content.c \
 		ft_print_exit.c ft_strcmp.c ft_pathjoin.c ft_strcut_right.c \
-		ft_strcut_left.c ft_perror_exit.c
+		ft_strcut_left.c ft_perror_exit.c \
+		ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+		ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
+		ft_lstmap.c	ft_lstis_correct.c \
 
-SRCLST = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
-			ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
-			ft_lstmap.c	ft_lstis_correct.c
+#==============================================================================#
+#                                   HEADERS                                    #
+#==============================================================================#
+
+HEAD_NAME = $(HEADER_DIR)/libft.h
+HEAD_LISTS = $(HEADER_DIR)/linked_lists.h
 
 #==============================================================================#
 #                                   OBJECTS                                    #
 #==============================================================================#
 
 OBJ = $(SRC:%.c=$(OBJ_DIR)/%.o)
-OBJLST = $(SRCLST:$(SRCLST_DIR)%.c=$(OBJLST_DIR)%.o)
-
-#==============================================================================#
-#                                DEPEDENCIES                                   #
-#==============================================================================#
-
-DEP = $(SRC:%.c=$(DEP_DIR)/%.o)
-DEPLST = $(DEPLST:$(DEPLST_DIR)%.c=$(DEPLST_DIR)%.d)
 
 #==============================================================================#
 #                                  LIBRARIES                                   #
@@ -82,30 +80,27 @@ GNL = ft_get_next_line/libftgnl.a
 #                                   MAKEFILE                                   #
 #==============================================================================#
 
-all : $(NAME)
+all : $(OBJ_DIR) $(NAME)
 
-$(NAME) : $(OBJ) $(OBJLST_DIR)/$(OBJLST)
+$(NAME) : $(OBJ)
 	$(MAKE_SILENT) -C ft_printf
 	$(MAKE_SILENT) -C ft_get_next_line
 	echo "$(YELLOW)Making Libft$(END)"
-	$(AR) $(ARFLAGS) $(LIBFT) $^
-	$(AR) $(ARFLAGS)T $(NAME) $(LIBFT) $(PRINTF) $(GNL)
+	$(AR) $(LIBFT) $^
+	$(AR)T $(NAME) $(LIBFT) $(PRINTF) $(GNL)
 	echo "$(GREEN)Done$(END)"
 
-$(OBJ_DIR)/%.o : $(SRCLST_DIR)/%.c $(OBJ_DIR) $(DEP_DIR)
-	$(CC) $(CFLAGS) -c $<
+$(OBJ_DIR)/%.o : $(SRC_DIR)/%.c $(HEAD_NAME) $(HEAD_LISTS)
+	$(CC) $(CFLAGS) $(DFLAGS) -c $< -o $@
 
 $(OBJ_DIR) :
-	mkdir $(OBJ_DIR)
-
-$(DEP_DIR) :
-	mkdir $(DEP_DIR)
+	$(MKDIR) $(OBJ_DIR)
 
 clean :
 	$(MAKE_SILENT) fclean -C ft_printf
 	$(MAKE_SILENT) fclean -C ft_get_next_line
 	echo "$(PURPLE)Cleaning Libft's objects...$(END)"
-	$(RM) $(OBJ) $(OBJLST)
+	$(RM)r $(OBJ_DIR)
 	echo "$(GREEN)Done$(END)"
 
 fclean : clean
@@ -117,4 +112,4 @@ re : fclean
 	$(MAKE_SILENT) all
 
 .PHONY : all clean fclean re
-#.SILENT :
+.SILENT :

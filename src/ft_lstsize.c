@@ -1,40 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/22 00:30:43 by ilyes             #+#    #+#             */
-/*   Updated: 2022/09/25 22:35:38 by ilandols         ###   ########.fr       */
+/*   Created: 2022/04/21 01:35:09 by ilyes             #+#    #+#             */
+/*   Updated: 2022/09/26 15:20:32 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/linked_lists.h"
+#include "../include/linked_lists.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+int	ft_lstsize(t_list *lst)
 {
-	t_list	*new;
-	t_list	*li;
+	int	i;
 
-	li = NULL;
-	while (lst)
+	i = 0;
+	while (lst != NULL)
 	{
-		new = ft_lstnew((*f)(lst->content));
-		if (new == NULL)
-		{
-			while (li)
-			{
-				new = li->next;
-				(*del)(li->content);
-				free(li);
-				li = new;
-			}
-			lst = NULL;
-			return (NULL);
-		}
-		ft_lstadd_back(&li, new);
 		lst = lst->next;
+		i++;
 	}
-	return (li);
+	return (i);
 }

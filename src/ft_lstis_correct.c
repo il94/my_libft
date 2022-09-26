@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstis_correct.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/20 15:43:31 by ilyes             #+#    #+#             */
-/*   Updated: 2022/09/25 22:35:38 by ilandols         ###   ########.fr       */
+/*   Created: 2022/09/01 18:20:58 by ilandols          #+#    #+#             */
+/*   Updated: 2022/09/26 15:20:32 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/linked_lists.h"
+#include "../include/linked_lists.h"
 
-t_list	*ft_lstnew(void *content)
+int	ft_lstis_correct(t_list *lst, int size)
 {
-	t_list	*element;
-
-	element = malloc(sizeof(*element));
-	if (element == NULL)
-		return (0);
-	element->content = content;
-	element->next = NULL;
-	return (element);
+	return (ft_lstsize(lst) == size);
 }

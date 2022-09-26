@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/21 18:35:28 by ilyes             #+#    #+#             */
-/*   Updated: 2022/09/25 22:35:38 by ilandols         ###   ########.fr       */
+/*   Created: 2022/04/20 15:43:31 by ilyes             #+#    #+#             */
+/*   Updated: 2022/09/26 15:20:32 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/linked_lists.h"
+#include "../include/linked_lists.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+t_list	*ft_lstnew(void *content)
 {
-	t_list	*temp;
+	t_list	*element;
 
-	temp = *lst;
-	if (lst == NULL)
-		return ;
-	else
-	{
-		while (temp != NULL)
-		{
-			temp = (*lst)->next;
-			del((*lst)->content);
-			free(*lst);
-			*lst = temp;
-		}
-	}
+	element = malloc(sizeof(*element));
+	if (element == NULL)
+		return (0);
+	element->content = content;
+	element->next = NULL;
+	return (element);
 }

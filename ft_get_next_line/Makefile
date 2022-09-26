@@ -1,34 +1,85 @@
+#==============================================================================#
+#                                    TARGET                                    #
+#==============================================================================#
+
 NAME = libftgnl.a
+
+#==============================================================================#
+#                                   COMMANDS                                   #
+#==============================================================================#
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
+DFLAGS = -MMD
+AR = ar -rc
+MKDIR = mkdir -p
+RM = rm -f
+MAKE_SILENT = make --no-print-directory
 
-SRC = ft_get_next_line.c \
-	get_next_line_utils.c \
+#==============================================================================#
+#                                    COLORS                                    #
+#==============================================================================#
 
-OBJ = $(SRC:.c=.o)
+PURPLE = \033[35m
+GREEN = \033[32m
+YELLOW = \033[33m
+END = \033[0m
 
-all : $(NAME)
+#==============================================================================#
+#                                    PATHS                                     #
+#==============================================================================#
+
+SRC_DIR = src
+HEADER_DIR = include
+OBJ_DIR = obj
+
+#==============================================================================#
+#                                   SOURCES                                    #
+#==============================================================================#
+
+SRC = ft_get_next_line.c get_next_line_utils.c \
+
+#==============================================================================#
+#                                    HEADER                                    #
+#==============================================================================#
+
+HEAD_NAME = $(HEADER_DIR)/get_next_line.h
+
+#==============================================================================#
+#                                   OBJECTS                                    #
+#==============================================================================#
+
+OBJ = $(SRC:%.c=$(OBJ_DIR)/%.o)
+
+#==============================================================================#
+#                                   MAKEFILE                                   #
+#==============================================================================#
+
+all : $(OBJ_DIR) $(NAME)
 
 $(NAME) : $(OBJ)
-	echo "\033[33mMaking Libft_gnl\033[0m"
-	ar rcs $(NAME) $^ 
-	echo "\033[32mDone\033[0m"
+	echo "$(YELLOW)Making Libft_gnl$(END)"
+	$(AR) $(NAME) $^ 
+	echo "$(GREEN)Done$(END)"
 
-%.o : %.c
-	$(CC) $(CFLAGS) -c $^
+$(OBJ_DIR)/%.o : $(SRC_DIR)/%.c $(HEAD_NAME)
+	$(CC) $(CFLAGS) $(DFLAGS) -c $< -o $@
+
+$(OBJ_DIR) :
+	$(MKDIR) $(OBJ_DIR)
 
 clean :
-	echo "\033[35mCleaning Libft_gnl's objects...\033[0m"
-	rm -f $(OBJ)
-	echo "\033[32mDone\033[0m"
+	echo "$(PURPLE)Cleaning Libft_gnl's objects...$(END)"
+	$(RM)r $(OBJ_DIR)
+	echo "$(GREEN)Done$(END)"
 
 fclean : clean
-	echo "\033[35mCleaning Libft_gnl...\033[0m"
-	rm -f $(NAME)
-	echo "\033[32mDone\033[0m"
+	echo "$(PURPLE)Cleaning Libft_gnl...$(END)"
+	$(RM) $(NAME)
+	echo "$(GREEN)Done$(END)"
 
-re : fclean all
+re : fclean
+	$(MAKE_SILENT) all
 
 .PHONY : all clean fclean re
 .SILENT :

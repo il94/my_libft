@@ -6,11 +6,11 @@
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 11:08:54 by ilandols          #+#    #+#             */
-/*   Updated: 2022/07/06 14:49:17 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/09/26 16:51:35 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../include/get_next_line.h"
 
 size_t	ft_strlen_gnl(const char *s)
 {

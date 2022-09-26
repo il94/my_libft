@@ -6,11 +6,11 @@
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 23:37:37 by ilyes             #+#    #+#             */
-/*   Updated: 2022/07/06 14:47:28 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/09/26 16:44:00 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../include/ft_printf.h"
 
 int	print_nbr(void *arg, char flag, char flag_b)
 {

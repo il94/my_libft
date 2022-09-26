@@ -1,35 +1,85 @@
+#==============================================================================#
+#                                    TARGET                                    #
+#==============================================================================#
+
 NAME = libftprintf.a
+
+#==============================================================================#
+#                                   COMMANDS                                   #
+#==============================================================================#
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
+DFLAGS = -MMD
+AR = ar -rc
+MKDIR = mkdir -p
+RM = rm -f
+MAKE_SILENT = make --no-print-directory
 
-SRC = ft_printf.c \
-	convert_flag.c \
-	p_convert_flag.c \
-	flags.c
-OBJ = $(SRC:.c=.o)
+#==============================================================================#
+#                                    COLORS                                    #
+#==============================================================================#
 
-all : $(NAME)
+PURPLE = \033[35m
+GREEN = \033[32m
+YELLOW = \033[33m
+END = \033[0m
+
+#==============================================================================#
+#                                    PATHS                                     #
+#==============================================================================#
+
+SRC_DIR = src
+HEADER_DIR = include
+OBJ_DIR = obj
+
+#==============================================================================#
+#                                   SOURCES                                    #
+#==============================================================================#
+
+SRC = ft_printf.c convert_flag.c p_convert_flag.c flags.c \
+
+#==============================================================================#
+#                                    HEADER                                    #
+#==============================================================================#
+
+HEAD_NAME = $(HEADER_DIR)/ft_printf.h
+
+#==============================================================================#
+#                                   OBJECTS                                    #
+#==============================================================================#
+
+OBJ = $(SRC:%.c=$(OBJ_DIR)/%.o)
+
+#==============================================================================#
+#                                   MAKEFILE                                   #
+#==============================================================================#
+
+all : $(OBJ_DIR) $(NAME)
 
 $(NAME) : $(OBJ)
-	echo "\033[33mMaking Libft_printf\033[0m"
-	ar rcs $(NAME) $^ 
-	echo "\033[32mDone\033[0m"
+	echo "$(YELLOW)Making Libft_printf$(END)"
+	$(AR) $(NAME) $^ 
+	echo "$(GREEN)Done$(END)"
 
-%.o : %.c
-	$(CC) $(CFLAGS) -c $^
+$(OBJ_DIR)/%.o : $(SRC_DIR)/%.c $(HEAD_NAME)
+	$(CC) $(CFLAGS) $(DFLAGS) -c $< -o $@
+
+$(OBJ_DIR) :
+	$(MKDIR) $(OBJ_DIR)
 
 clean :
-	echo "\033[35mCleaning Libft_printf's objects...\033[0m"
-	rm -f $(OBJ)
-	echo "\033[32mDone\033[0m"
+	echo "$(PURPLE)Cleaning Libft_printf's objects...$(END)"
+	$(RM)r $(OBJ_DIR)
+	echo "$(GREEN)Done$(END)"
 
 fclean : clean
-	echo "\033[35mCleaning Libft_printf...\033[0m"
-	rm -f $(NAME)
-	echo "\033[32mDone\033[0m"
+	echo "$(PURPLE)Cleaning Libft_printf...$(END)"
+	$(RM) $(NAME)
+	echo "$(GREEN)Done$(END)"
 
-re : fclean all
+re : fclean
+	$(MAKE_SILENT) all
 
 .PHONY : all clean fclean re
 .SILENT :
