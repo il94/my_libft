@@ -1,5 +1,5 @@
 *.o
 *.d
 *.a
-./a.out
+./libft_executor
 .vscode
