@@ -50,11 +50,11 @@ SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c \
 		ft_print_array.c ft_get_size_array.c ft_free_array.c ft_print_bits.c \
 		ft_iswhitespace.c ft_islower.c ft_get_size_number.c ft_get_file_content.c \
 		ft_print_exit.c ft_strcmp.c ft_pathjoin.c ft_strcut_right.c \
-		ft_strcut_left.c ft_perror_exit.c ft_split_charset.c ft_strjoin_free \
+		ft_strcut_left.c ft_perror_exit.c ft_split_charset.c ft_strjoin_free.c \
 		\
 		ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 		ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
-		ft_lstmap.c	ft_lstis_correct.c \
+		ft_lstmap.c	ft_lstis_correct.c ft_lstprint.c ft_lstsplit_charset.c \
 
 #==============================================================================#
 #                                   HEADERS                                    #

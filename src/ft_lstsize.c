@@ -6,7 +6,7 @@
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 01:35:09 by ilyes             #+#    #+#             */
-/*   Updated: 2022/09/26 15:20:32 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/10/07 17:10:27 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_lstsize(t_list *lst)
 	int	i;
 
 	i = 0;
-	while (lst != NULL)
+	while (lst)
 	{
 		lst = lst->next;
 		i++;
