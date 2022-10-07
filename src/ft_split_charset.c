@@ -6,7 +6,7 @@
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 12:40:35 by ilandols          #+#    #+#             */
-/*   Updated: 2022/10/07 13:09:48 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/10/07 15:25:21 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ static int	get_size_word(char const *s, char *charset, int index)
 	int	result;
 
 	result = 0;
-	while (s[index] && is_charset(s[index], charset))
+	if (s[index] && is_charset(s[index], charset))
 	{
-		result++;
 		index++;
+		return (1);
 	}
 	while (s[index] && !is_charset(s[index], charset))
 	{
@@ -53,11 +53,12 @@ static char	*get_word(char const *s, char *charset, int *index, int size_word)
 	result = malloc((size_word + 1) * sizeof(char));
 	if (!result)
 		return (NULL);
-	while (s[*index] && is_charset(s[*index], charset))
+	if (s[*index] && is_charset(s[*index], charset))
 	{
 		result[j] = s[*index];
-		j++;
+		result[j + 1] = '\0';
 		*index += 1;
+		return (result);
 	}
 	while (s[*index] && !is_charset(s[*index], charset))
 	{
@@ -82,7 +83,10 @@ static int	count_words(char const *s, char *charset)
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] && !is_charset(s[i], charset) && is_charset(s[i + 1], charset))
+		if (s[i] && is_charset(s[i], charset))
+			result++;
+		else if (s[i] && !is_charset(s[i], charset)
+			&& is_charset(s[i + 1], charset))
 			result++;
 		i++;
 	}
