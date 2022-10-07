@@ -6,7 +6,7 @@
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 00:50:41 by ilandols          #+#    #+#             */
-/*   Updated: 2022/10/07 13:11:39 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/10/07 15:06:07 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,5 +81,6 @@ char		*ft_strcut_left(char const *s, int c);
 char		*ft_strcut_right(char const *s, int c);
 void		ft_perror_exit(char *str);
 char		**ft_split_charset(char const *s, char *charset);
+char		*ft_strjoin_free(char *s1, char *s2);
 
 #endif
