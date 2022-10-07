@@ -6,7 +6,7 @@
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 00:50:41 by ilandols          #+#    #+#             */
-/*   Updated: 2022/09/26 16:44:19 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/10/07 13:11:39 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@
 typedef enum e_bool {
 	FALSE,
 	TRUE
-}
-			t_bool;
+}			t_bool;
 
 typedef struct s_pos {
 	int	x;
@@ -81,5 +80,6 @@ char		*ft_pathjoin(char const *s1, char const *s2);
 char		*ft_strcut_left(char const *s, int c);
 char		*ft_strcut_right(char const *s, int c);
 void		ft_perror_exit(char *str);
+char		**ft_split_charset(char const *s, char *charset);
 
 #endif
