@@ -6,7 +6,7 @@
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 03:03:59 by ilyes             #+#    #+#             */
-/*   Updated: 2022/10/07 17:05:01 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/10/08 18:59:27 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*temp;
 
-	if (*lst)
+	if (lst && *lst)
 	{
 		temp = *lst;
 		while (temp->next)
