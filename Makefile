@@ -69,9 +69,9 @@ OBJ = $(SRC:%.c=$(OBJ_DIR)/%.o)
 #==============================================================================#
 
 LIBFT = libftbase.a
-PRINTF = ft_printf/libftprintf.a
-GNL = ft_get_next_line/libftgnl.a
-LISTS = linked_lists/lists.a
+PRINTF = libs/ft_printf/libftprintf.a
+GNL = libs/ft_get_next_line/libftgnl.a
+LISTS = libs/linked_lists/lists.a
 
 #==============================================================================#
 #                                   MAKEFILE                                   #
@@ -87,9 +87,9 @@ $(EXEC) : $(NAME)
 	echo "$(GREEN)Done$(END)"
 
 $(NAME) : $(OBJ)
-	$(MAKE_SILENT) -C ft_printf
-	$(MAKE_SILENT) -C ft_get_next_line
-	$(MAKE_SILENT) -C linked_lists
+	$(MAKE_SILENT) -C libs/ft_printf
+	$(MAKE_SILENT) -C libs/ft_get_next_line
+	$(MAKE_SILENT) -C libs/linked_lists
 	echo "$(YELLOW)Making Libft$(END)"
 	$(AR) $(LIBFT) $^
 	$(AR)T $(NAME) $(LIBFT) $(PRINTF) $(GNL) $(LISTS)
@@ -102,9 +102,9 @@ $(OBJ_DIR) :
 	$(MKDIR) $(OBJ_DIR)
 
 clean :
-	$(MAKE_SILENT) fclean -C ft_printf
-	$(MAKE_SILENT) fclean -C ft_get_next_line
-	$(MAKE_SILENT) fclean -C linked_lists
+	$(MAKE_SILENT) fclean -C libs/ft_printf
+	$(MAKE_SILENT) fclean -C libs/ft_get_next_line
+	$(MAKE_SILENT) fclean -C libs/linked_lists
 	echo "$(PURPLE)Cleaning Libft's objects...$(END)"
 	$(RM)r $(OBJ_DIR)
 	$(RM)r $(OBJ_LISTS_DIR)

@@ -13,7 +13,7 @@
 #ifndef LINKED_LISTS_H
 # define LINKED_LISTS_H
 
-# include "../../include/libft.h"
+# include "../../../include/libft.h"
 
 typedef struct s_list
 {
