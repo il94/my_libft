@@ -48,9 +48,10 @@ SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c \
 		ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c \
 		ft_tolower.c ft_toupper.c ft_long_long_atoi.c ft_delete_content.c \
 		ft_print_array.c ft_get_size_array.c ft_free_array.c ft_print_bits.c \
-		ft_iswhitespace.c ft_islower.c ft_get_size_number.c ft_get_file_content.c \
-		ft_print_exit.c ft_strcmp.c ft_pathjoin.c ft_strcut_right.c \
-		ft_strcut_left.c ft_perror_exit.c ft_split_charset.c ft_strjoin_free.c \
+		ft_iswhitespace.c ft_islower.c ft_get_size_number.c \
+		ft_get_file_content.c ft_print_exit.c ft_strcmp.c ft_pathjoin.c \
+		ft_strcut_right.c ft_strcut_left.c ft_perror_exit.c ft_split_charset.c \
+		ft_strjoin_free.c \
 
 #==============================================================================#
 #                                   HEADERS                                    #
