@@ -6,7 +6,7 @@
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 16:00:24 by ilandols          #+#    #+#             */
-/*   Updated: 2022/11/13 18:05:04 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/11/13 18:12:39 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,5 @@ char	*ft_delete_char(char *str, size_t index)
 		result[i++] = str[j++];
 	}
 	result[i] = '\0';
-	free(str);
 	return (result);
 }
