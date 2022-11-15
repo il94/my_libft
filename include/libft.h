@@ -6,7 +6,7 @@
 /*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 00:50:41 by ilandols          #+#    #+#             */
-/*   Updated: 2022/10/08 17:42:33 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/11/15 13:21:46 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,5 +82,9 @@ char		*ft_strcut_right(char const *s, int c);
 void		ft_perror_exit(char *str);
 char		**ft_split_charset(char const *s, char *charset);
 char		*ft_strjoin_free(char *s1, char *s2);
+char		*ft_delete_char(char *str, size_t index);
+int			ft_str_isalnum(char *str);
+int			ft_str_isalpha(char *str);
+int			ft_str_isdigit(char *str);
 
 #endif
