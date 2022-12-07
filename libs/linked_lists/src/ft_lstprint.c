@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstprint.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
+/*   By: ilandols <ilandols@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 16:38:10 by ilandols          #+#    #+#             */
-/*   Updated: 2022/10/07 16:39:38 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/12/06 16:59:44 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/linked_lists.h"
 
-void	ft_lstprint(t_list *lst)
+void	ft_lstprint(t_list2 *lst)
 {
 	while (lst)
 	{

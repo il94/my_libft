@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsplit_charset.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
+/*   By: ilandols <ilandols@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 12:40:35 by ilandols          #+#    #+#             */
-/*   Updated: 2022/10/07 17:04:00 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/12/06 16:59:29 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,9 +95,9 @@ static int	count_words(char const *s, char *charset)
 	return (result);
 }
 
-t_list	*ft_lstsplit_charset(char const *s, char *charset)
+t_list2	*ft_lstsplit_charset(char const *s, char *charset)
 {
-	t_list	*lst;	
+	t_list2	*lst;	
 	int		words;
 	int		i;
 	int		j;

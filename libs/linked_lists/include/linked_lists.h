@@ -21,17 +21,29 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-t_list		*ft_lstnew(void *content);
+typedef struct s_list2
+{
+	void			*content;
+	struct s_list2	*next;
+	struct s_list2	*prev;
+}					t_list2;
+
+t_list2		*ft_lstnew(void *content);
 void		ft_lstadd_front(t_list **lst, t_list *new);
-int			ft_lstsize(t_list *lst);
-t_list		*ft_lstlast(t_list *lst);
-void		ft_lstadd_back(t_list **lst, t_list *new);
-void		ft_lstdelone(t_list *lst);
-void		ft_lstclear(t_list **lst);
+int			ft_lstsize(t_list2 *lst);
+t_list2		*ft_lstlast(t_list2 *lst);
+void		ft_lstadd_back(t_list2 **lst, t_list2 *new);
+void		ft_lstdelone(t_list2 *lst);
+void		ft_lstclear(t_list2 **lst);
 void		ft_lstiter(t_list *lst, void (*f)(void *));
-t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-int			ft_lstis_correct(t_list *lst, int size);
-void		ft_lstprint(t_list *lst);
-t_list		*ft_lstsplit_charset(char const *s, char *charset);
+t_list2		*ft_lstmap(t_list2 *lst, void *(*f)(void *), void (*del)(void *));
+int			ft_lstis_correct(t_list2 *lst, int size);
+void		ft_lstprint(t_list2 *lst);
+t_list2		*ft_lstsplit_charset(char const *s, char *charset);
+t_list2		*ft_array_to_lst(char **array);
+t_list2		*ft_lstnew_dup(void *content);
+void		ft_lstclear_dup(t_list2 **lst);
+t_list2		*ft_lststrncmp_lex(t_list2 **lst, char *to_find, int n);
+t_list2		*ft_lststrrncmp_lex(t_list2 **lst, char *to_find);
 
 #endif

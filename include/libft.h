@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ilandols <ilyes@student.42.fr>             +#+  +:+       +#+        */
+/*   By: ilandols <ilandols@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 00:50:41 by ilandols          #+#    #+#             */
-/*   Updated: 2022/11/15 13:21:46 by ilandols         ###   ########.fr       */
+/*   Updated: 2022/12/07 17:52:29 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,6 @@ char		*ft_delete_char(char *str, size_t index);
 int			ft_str_isalnum(char *str);
 int			ft_str_isalpha(char *str);
 int			ft_str_isdigit(char *str);
+int			ft_strrncmp(const char *s1, const char *s2, size_t n);
 
 #endif

@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lststrncmp.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilandols <ilandols@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/21 17:02:53 by ilyes             #+#    #+#             */
-/*   Updated: 2022/12/06 17:00:18 by ilandols         ###   ########.fr       */
+/*   Created: 2022/12/06 17:03:14 by ilandols          #+#    #+#             */
+/*   Updated: 2022/12/07 17:39:32 by ilandols         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/linked_lists.h"
 
-void	ft_lstdelone(t_list2 *lst)
+t_list2	*ft_lststrncmp_lex(t_list2 **lst, char *to_find, int n)
 {
-	if (lst)
+	t_list2	*tmp;	
+
+	tmp = *lst;
+	while (tmp)
 	{
-		if (lst->prev)
-			lst->prev->next = lst->next;
-		if (lst->next)
-			lst->next->prev = lst->prev;
-		free(lst);
+		if (!ft_strncmp(tmp->content, to_find, n))
+			return (tmp);
+		tmp = tmp->next;
 	}
+	return (NULL);
 }
